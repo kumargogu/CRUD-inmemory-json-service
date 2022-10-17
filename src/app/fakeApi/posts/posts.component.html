@@ -1,0 +1,64 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th>#Id</th>
+      <th style="width:70px">User Id</th>
+      <th style="width:250px">Title</th>
+      <th style="width:500px">Body</th>
+      <th>Actions <button class="btn btn-success" style="width:150px ;">Add</button></th>
+    </tr>
+  </thead>
+  <tbody>
+<tr *ngFor="let post of lstPost">
+  <td>{{post.id}}</td>
+  <td>{{post.userId}}</td>
+  <td>{{post.title}}</td>
+  <td>{{post.body}}</td>
+  <td>
+<a class="btn btn-primary">View</a> &nbsp;
+<a class="btn btn-warning">Edit</a> &nbsp;
+<a class="btn btn-danger" (click)="deletePost(post.id)">Delete</a>
+  </td>
+
+</tr>
+  </tbody>
+</table>
+
+<!--popup model start-->
+
+<div class="modal fade" id="mpStudent" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="mpStudent">{{title}}</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div *ngIf="alertMsg" class="alert alert-success">
+          {{alertMsg}}
+        </div>
+        <form>
+          <div class="form-group">
+            <label for="txtUserId" class="col-form-label">UserId:</label>
+            <input type="text" [(ngModel)]="postModel.userId" name="txtUserId" class="form-control" id="txtUserId">
+          </div>
+          <div class="form-group">
+            <label for="txtTitle" class="col-form-label">Title:</label>
+            <input type="text" [(ngModel)]="postModel.title" name="txtTitle" class="form-control" id="txtTitle">
+          </div>
+          <div class="form-group">
+            <label for="txtBody" class="col-form-label">Body:</label>
+            <input type="text" [(ngModel)]="postModel.body" name="txtBody" class="form-control" id="txtBody">
+          </div>
+
+
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary"(click)="saveUser()">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--popup model end-->
