@@ -11,6 +11,9 @@ import{HttpClientModule} from '@angular/common/http'
 import { PostserviceService } from './fakeApi/postservice.service';
 import { ReactiveComponent } from './reactive/reactive.component';
 import { FormbuilderComponent } from './formbuilder/formbuilder.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
+import { ChildOutputComponent } from './child-output/child-output.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +21,10 @@ import { FormbuilderComponent } from './formbuilder/formbuilder.component';
     StudentdetailsComponent,
     PostsComponent,
     ReactiveComponent,
-    FormbuilderComponent
+    FormbuilderComponent,
+    ParentComponent,
+    ChildComponent,
+    ChildOutputComponent
   ],
   imports: [
     BrowserModule,

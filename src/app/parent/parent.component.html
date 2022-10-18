@@ -1,0 +1,10 @@
+<P>Parent Component for @input & @Output</P>
+<div class="container" style="background-color:aqua;border-radius:5px ;">
+  <app-child-output (newItemEmmit)="addItem($event)"></app-child-output>
+</div>
+<ul class="list-group">
+  <!--  <li class="list-group-item" *ngFor="let fruit of fruits">{{fruit}}</li> -->
+  <li class="list-group-item" *ngFor="let fruit of fruits">
+    <app-child [nameOftheFruit]="fruit"></app-child>
+  </li>
+</ul>
