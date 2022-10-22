@@ -14,6 +14,7 @@ import { FormbuilderComponent } from './formbuilder/formbuilder.component';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { ChildOutputComponent } from './child-output/child-output.component';
+import { PostdetailsComponent } from './fakeApi/postdetails/postdetails.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +25,8 @@ import { ChildOutputComponent } from './child-output/child-output.component';
     FormbuilderComponent,
     ParentComponent,
     ChildComponent,
-    ChildOutputComponent
+    ChildOutputComponent,
+    PostdetailsComponent
   ],
   imports: [
     BrowserModule,
