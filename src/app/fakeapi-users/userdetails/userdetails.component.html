@@ -1,0 +1,22 @@
+
+Id:{{userModel.id}}<br>
+Name:{{userModel.name}}<br>
+User Name:{{userModel.username}}<br>
+Email:{{userModel.email}}<hr>
+<p>Address:</p>
+Street:{{userModel.address.street}}<br>
+Suite:{{userModel.address.suite}}<br>
+City:{{userModel.address.city}}<br>
+Zipcode:{{userModel.address.zipcode}}<hr>
+<p>Geo</p>
+Lat:{{userModel.address.geo.lat}}<br>
+ Lng:{{userModel.address.geo.lng}}<hr> 
+
+Phone:{{userModel.email}}<br>
+WebSite:{{userModel.website}}<hr>
+<p>Company</p>
+Name:{{userModel.company.name}}<br>
+catchPhrase:{{userModel.company.catchPhrase}}<br>
+bs:{{userModel.company.bs}}
+<hr>
+<button [routerLink]="['/users']" class="btn btn-warning">Back</button>

@@ -13,15 +13,20 @@ getAll(){
   return this.httpClient.get<PostModel[]>(this.apiBaseUrl);
 }
 getById(id:number){
-//return this.httpClient
+let url:string=this.apiBaseUrl+'/'+id;
+return this.httpClient.get<PostModel>(url);
 }
 create(post:PostModel){
-
+return this.httpClient.post(this.apiBaseUrl,post);
 }
 update(id:number,post:PostModel){
-
+let url:string=this.apiBaseUrl+'/'+id;
+return this.httpClient.put(url,post)
+//return this.httpClient.patch(url,{UserId:post.userId,title:post.title});
 }
 delete(id:number){
-//this.httpClient.delete(id);
+let url:string=this.apiBaseUrl+'/'+id;
+return this.httpClient.delete(url);
+
 }
 }

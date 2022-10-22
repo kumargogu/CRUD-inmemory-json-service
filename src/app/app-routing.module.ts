@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ChildComponent } from './child/child.component';
+import { UserdetailsComponent } from './fakeapi-users/userdetails/userdetails.component';
+import { UsersComponent } from './fakeapi-users/users/users.component';
+import { PostdetailsComponent } from './fakeApi/postdetails/postdetails.component';
 import { PostsComponent } from './fakeApi/posts/posts.component';
 import { FormbuilderComponent } from './formbuilder/formbuilder.component';
 import { ParentComponent } from './parent/parent.component';
@@ -18,8 +21,19 @@ const routes: Routes = [
     component:StudentComponent
   },
   {
+    path:'posts/:id',
+    component:PostdetailsComponent
+  },
+  {
     path:'posts',
     component:PostsComponent
+  }, {
+    path: 'users/:id',
+    component:UserdetailsComponent
+  },
+  {
+    path: 'users',
+    component:UsersComponent
   },
   {
     path:'reactive',
@@ -34,7 +48,7 @@ const routes: Routes = [
     component:ParentComponent
   },
   {
-    path:'child',
+     path:'child',
     component:ChildComponent
   }
 
