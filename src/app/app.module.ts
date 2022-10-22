@@ -15,6 +15,8 @@ import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { ChildOutputComponent } from './child-output/child-output.component';
 import { PostdetailsComponent } from './fakeApi/postdetails/postdetails.component';
+import { UsersComponent } from './fakeapi-users/users/users.component';
+import { UserdetailsComponent } from './fakeapi-users/userdetails/userdetails.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +28,9 @@ import { PostdetailsComponent } from './fakeApi/postdetails/postdetails.componen
     ParentComponent,
     ChildComponent,
     ChildOutputComponent,
-    PostdetailsComponent
+    PostdetailsComponent,
+    UsersComponent,
+    UserdetailsComponent
   ],
   imports: [
     BrowserModule,
