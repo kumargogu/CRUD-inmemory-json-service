@@ -39,7 +39,7 @@ const routes: Routes = [
     component:ParentComponent
   },
   {
-    path:'child',
+     path:'child',
     component:ChildComponent
   }
 
