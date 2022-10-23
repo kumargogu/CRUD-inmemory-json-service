@@ -17,6 +17,8 @@ import { ChildOutputComponent } from './child-output/child-output.component';
 import { PostdetailsComponent } from './fakeApi/postdetails/postdetails.component';
 import { UsersComponent } from './fakeapi-users/users/users.component';
 import { UserdetailsComponent } from './fakeapi-users/userdetails/userdetails.component';
+import { PhotosComponent } from './photosapi/photos/photos.component';
+import { PhotodetailsComponent } from './photosapi/photodetails/photodetails.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +32,9 @@ import { UserdetailsComponent } from './fakeapi-users/userdetails/userdetails.co
     ChildOutputComponent,
     PostdetailsComponent,
     UsersComponent,
-    UserdetailsComponent
+    UserdetailsComponent,
+    PhotosComponent,
+    PhotodetailsComponent
   ],
   imports: [
     BrowserModule,
