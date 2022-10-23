@@ -7,6 +7,8 @@ import { PostdetailsComponent } from './fakeApi/postdetails/postdetails.componen
 import { PostsComponent } from './fakeApi/posts/posts.component';
 import { FormbuilderComponent } from './formbuilder/formbuilder.component';
 import { ParentComponent } from './parent/parent.component';
+import { PhotodetailsComponent } from './photosapi/photodetails/photodetails.component';
+import { PhotosComponent } from './photosapi/photos/photos.component';
 import { ReactiveComponent } from './reactive/reactive.component';
 import { StudentComponent } from './student/student/student.component';
 import { StudentdetailsComponent } from './student/studentdetails/studentdetails.component';
@@ -34,6 +36,14 @@ const routes: Routes = [
   {
     path: 'users',
     component:UsersComponent
+  },
+  {
+    path: 'photos/:id',
+    component:PhotodetailsComponent
+  },
+  {
+    path: 'photos',
+    component:PhotosComponent
   },
   {
     path:'reactive',
