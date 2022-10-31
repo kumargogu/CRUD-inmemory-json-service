@@ -19,6 +19,9 @@ import { UsersComponent } from './fakeapi-users/users/users.component';
 import { UserdetailsComponent } from './fakeapi-users/userdetails/userdetails.component';
 import { PhotosComponent } from './photosapi/photos/photos.component';
 import { PhotodetailsComponent } from './photosapi/photodetails/photodetails.component';
+import { TodoComponent } from './todoApi/todo/todo.component';
+import { TodedetailComponent } from './todoApi/todedetail/todedetail.component';
+import { TableComponent } from './tabledynamic/table/table.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +37,10 @@ import { PhotodetailsComponent } from './photosapi/photodetails/photodetails.com
     UsersComponent,
     UserdetailsComponent,
     PhotosComponent,
-    PhotodetailsComponent
+    PhotodetailsComponent,
+    TodoComponent,
+    TodedetailComponent,
+    TableComponent
   ],
   imports: [
     BrowserModule,

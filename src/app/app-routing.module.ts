@@ -12,6 +12,9 @@ import { PhotosComponent } from './photosapi/photos/photos.component';
 import { ReactiveComponent } from './reactive/reactive.component';
 import { StudentComponent } from './student/student/student.component';
 import { StudentdetailsComponent } from './student/studentdetails/studentdetails.component';
+import { TableComponent } from './tabledynamic/table/table.component';
+import { TodedetailComponent } from './todoApi/todedetail/todedetail.component';
+import { TodoComponent } from './todoApi/todo/todo.component';
 
 const routes: Routes = [
   {
@@ -44,6 +47,18 @@ const routes: Routes = [
   {
     path: 'photos',
     component:PhotosComponent
+  },
+  {
+    path: 'todo/:id',
+    component:TodedetailComponent
+  },
+  {
+    path: 'todo',
+    component:TodoComponent
+  },
+  {
+    path: 'dtable',
+    component:TableComponent
   },
   {
     path:'reactive',

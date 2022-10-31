@@ -1,0 +1,62 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th *ngFor="let key of todoKeys">{{key | uppercase}}</th>
+           <!--  <th>User Id</th>
+            <th>Title</th>
+            <th>Completed</th> -->
+            <th>Action <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#todoModal" (click)="addTodo()"><i class="fa-sharp fa-solid fa-plus"></i></button></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let todo of lstTodoModel">
+            <td>{{todo.userId}}</td>
+            <td>{{todo.id}}</td>
+            <td style="width:400px ;">{{todo.title}}</td>
+            <td>{{todo.completed}}</td>
+            <td>
+                <button class="btn btn-primary"[routerLink]="['/todo',todo.id]"><i class="fa-sharp fa-solid fa-eye"></i></button>&nbsp;
+                <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#todoModal"(click)="editTodo(todo)"><i class="fa-solid fa-pen-to-square"></i></button>&nbsp;
+                <button class="btn btn-danger"(click)="deleteTodo(todo.id)"><i class="fa-solid fa-trash-can"></i></button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<!-- popup model start -->
+
+<div class="modal fade" id="todoModal" tabindex="-1" aria-labelledby="todoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="todoModalLabel">{{title}}</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="alert alert-success" *ngIf="alertMsg">
+              {{alertMsg}}
+          </div>
+          <form>
+            <div class="form-group">
+              <label for="txtUserId" class="col-form-label">User Id:</label>
+              <input type="number" [(ngModel)]="todoModel.userId" name="txtUserId"  class="form-control" id="txtUserId">
+            </div>
+            <div class="form-group">
+              <label for="txtTitle" class="col-form-label">Title:</label>
+              <input type="text" [(ngModel)]="todoModel.title" name="txtTitle" class="form-control" id="txtTitle">
+            </div>
+            <div class="form-group">
+              <label for="completed" class="col-form-label">Completed:</label>
+              <input type="checkbox" [(ngModel)]="todoModel.completed" name="completed" id="completed">
+            </div>           
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary"(click)="saveTodo()">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+<!-- popup model end -->
