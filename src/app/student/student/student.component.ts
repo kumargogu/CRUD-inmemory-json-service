@@ -8,6 +8,8 @@ import { StudentService } from '../student.service';
   styleUrls: ['./student.component.css']
 })
 export class StudentComponent implements OnInit {
+  searchString: string = '';
+  
   studentModel=new StudentModel();
 lstStudent:StudentModel[];
 alertMsg:string;

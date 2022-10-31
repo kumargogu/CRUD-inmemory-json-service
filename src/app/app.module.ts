@@ -22,6 +22,7 @@ import { PhotodetailsComponent } from './photosapi/photodetails/photodetails.com
 import { TodoComponent } from './todoApi/todo/todo.component';
 import { TodedetailComponent } from './todoApi/todedetail/todedetail.component';
 import { TableComponent } from './tabledynamic/table/table.component';
+import { FilterdataPipe } from './student/student/filterdata.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,7 +41,8 @@ import { TableComponent } from './tabledynamic/table/table.component';
     PhotodetailsComponent,
     TodoComponent,
     TodedetailComponent,
-    TableComponent
+    TableComponent,
+    FilterdataPipe
   ],
   imports: [
     BrowserModule,
