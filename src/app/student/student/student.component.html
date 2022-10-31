@@ -1,3 +1,4 @@
+<div style="margin:auto;width:50%"><input type="text" id="txtSearchName" [(ngModel)]="searchString" name="txtSearchName" placeholder="Search.." class="form-control"></div>
 
 <table class="table ">
 <thead>
@@ -9,7 +10,7 @@
   <th>Actions<a class="btn btn-success" style="background-color:green;width:150px ;" data-bs-toggle="modal" data-bs-target="#mpStudent" (click)="addStudent()">Add</a>&nbsp;</th>
 </thead>
 <tbody>
-  <tr *ngFor="let student of lstStudent">
+  <tr *ngFor="let student of lstStudent | filterdata:searchString">
     <td>{{student.id}}</td>
     <td>{{student.name}}</td>
     <td>{{student.course}}</td>
