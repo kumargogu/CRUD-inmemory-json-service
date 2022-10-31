@@ -37,10 +37,12 @@ export class PhotosComponent implements OnInit {
     if (this.photoModel.id) {
       this.photoService.update(this.photoModel.id, this.photoModel).subscribe(res => {
         console.warn(res);
+        this.alertMsg="Photos updated successfully..!"
       })
     } else {
       this.photoService.create(this.photoModel).subscribe(res => {
         console.warn(res);
+        this.alertMsg="Photos created successfully..!"
        // this.lstPhotos = res as PhotosModel[];
       })
     }
