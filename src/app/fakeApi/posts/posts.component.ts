@@ -19,7 +19,7 @@ export class PostsComponent implements OnInit {
   }
 loadData(){
   this.postService.getAll().subscribe(res=>{
-    this.lstPost=res;
+    this.lstPost=res as PostModel[];
   });
 }
 

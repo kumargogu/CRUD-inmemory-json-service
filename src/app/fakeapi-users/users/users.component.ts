@@ -19,6 +19,8 @@ export class UsersComponent implements OnInit {
     this.userService.getAll().subscribe(res => {
       //console.warn(res);
       this.lstUsers = res;
+    }, error => {
+      console.warn(error);
     })
   }
 

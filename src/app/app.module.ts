@@ -23,6 +23,8 @@ import { TodoComponent } from './todoApi/todo/todo.component';
 import { TodedetailComponent } from './todoApi/todedetail/todedetail.component';
 import { TableComponent } from './tabledynamic/table/table.component';
 import { FilterdataPipe } from './student/student/filterdata.pipe';
+import { EmployeeModule } from './employee/employee.module';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,6 +52,7 @@ import { FilterdataPipe } from './student/student/filterdata.pipe';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
+    EmployeeModule
   ],
   providers: [StudentService,PostserviceService],
   bootstrap: [AppComponent]
