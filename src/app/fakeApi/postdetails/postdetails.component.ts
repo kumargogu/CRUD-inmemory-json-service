@@ -20,7 +20,7 @@ this.id=+activatedRoute.snapshot.paramMap.get('id');
   ngOnInit(): void {
     this.postService.getById(this.id).subscribe(res=>{
       console.warn(res);
-      this.postModel=res;
+      this.postModel=res as PostModel;
     })
   }
 
