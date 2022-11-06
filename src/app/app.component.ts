@@ -7,5 +7,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'In-memory and All';
-  logoUrl:string="./assets/rubylogo.png"
 }

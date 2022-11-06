@@ -1,17 +1,14 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { CommonService } from '../fakeApi/CommonService/common.service';
 import { TodoModel } from './todo.model';
 
 @Injectable({
   providedIn: 'root'
 })
-export class TodoService extends CommonService {
-/* private readonly baseUrl: string = "https://jsonplaceholder.typicode.com/todos"; */
-  constructor(public httpClient: HttpClient) {
-    super('https://jsonplaceholder.typicode.com/todos',httpClient)
-   }
-  /* getAll() {
+export class TodoService {
+private readonly baseUrl: string = "https://jsonplaceholder.typicode.com/todos";
+  constructor(private httpClient: HttpClient) { }
+  getAll() {
     return this.httpClient.get<TodoModel[]>(this.baseUrl);
   }
   getById(id: number) {
@@ -28,5 +25,5 @@ export class TodoService extends CommonService {
   delete(id:number) {
     let url = this.baseUrl + '/' + id;
     return this.httpClient.delete<TodoModel>(url);
-  } */
+  }
 }

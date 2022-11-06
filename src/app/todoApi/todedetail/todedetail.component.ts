@@ -17,7 +17,7 @@ export class TodedetailComponent implements OnInit {
 
   ngOnInit(): void {
     this.todoService.getById(this.id).subscribe(res => {
-      this.todoModel = res as TodoModel;
+      this.todoModel = res;
      })
   }
 
