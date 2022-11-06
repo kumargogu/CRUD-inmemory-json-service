@@ -31,28 +31,28 @@ import { StudentfulldetailsComponent } from './student/studentfulldetails/studen
 
 @NgModule({
   declarations: [
-    AppComponent,
+   AppComponent,
     StudentComponent,
-    StudentdetailsComponent,
+      StudentdetailsComponent,
     PostsComponent,
     ReactiveComponent,
     FormbuilderComponent,
     ParentComponent,
     ChildComponent,
-    ChildOutputComponent,
+      ChildOutputComponent,
     PostdetailsComponent,
     UsersComponent,
     UserdetailsComponent,
     PhotosComponent,
     PhotodetailsComponent,
-    TodoComponent,
+      TodoComponent,
     TodedetailComponent,
     TableComponent,
-    FilterdataPipe,
     NotfoundComponent,
     WelcomeComponent,
     UnauthorizedComponent,
-    StudentfulldetailsComponent
+    StudentfulldetailsComponent,
+    FilterdataPipe
   ],
   imports: [
     BrowserModule,
