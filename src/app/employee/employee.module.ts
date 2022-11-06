@@ -7,11 +7,11 @@ import { EmployeeService } from "./employee.service";
 import { EmployeedetailCoponent } from "./employeedetail.component";
 const routes: Routes = [
     {
-        path: 'employee/:id',
+        path: ':id',
         component:EmployeedetailCoponent
     },
     {
-        path: 'employee',
+        path: '',
         component:EmployeeComponent
     }
     
@@ -24,7 +24,7 @@ const routes: Routes = [
     imports: [
         FormsModule,
         CommonModule,
-        RouterModule.forRoot(routes)
+        RouterModule.forChild(routes)
     ],
     providers: [EmployeeService],
     bootstrap:[]
