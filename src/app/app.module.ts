@@ -23,12 +23,6 @@ import { TodoComponent } from './todoApi/todo/todo.component';
 import { TodedetailComponent } from './todoApi/todedetail/todedetail.component';
 import { TableComponent } from './tabledynamic/table/table.component';
 import { FilterdataPipe } from './student/student/filterdata.pipe';
-/* import { EmployeeModule } from './employee/employee.module'; */
-import { NotfoundComponent } from './notfound/notfound.component';
-import { WelcomeComponent } from './welcome/welcome.component';
-import { UnauthorizedComponent } from './unauthorized/unauthorized.component';
-import { StudentfulldetailsComponent } from './student/studentfulldetails/studentfulldetails.component';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,18 +42,14 @@ import { StudentfulldetailsComponent } from './student/studentfulldetails/studen
     TodoComponent,
     TodedetailComponent,
     TableComponent,
-    FilterdataPipe,
-    NotfoundComponent,
-    WelcomeComponent,
-    UnauthorizedComponent,
-    StudentfulldetailsComponent
+    FilterdataPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [StudentService,PostserviceService],
   bootstrap: [AppComponent]

@@ -23,7 +23,7 @@ export class TodoComponent implements OnInit {
   loaddata() {
     this.todoService.getAll().subscribe(res => {
       //console.warn(res);
-      this.lstTodoModel = res as TodoModel[];
+      this.lstTodoModel = res;
 
       this.lstTodoModel.forEach((elements: any) => {
         this.todoKeys = Object.keys(elements);
@@ -52,7 +52,7 @@ export class TodoComponent implements OnInit {
     } else {
       this.todoService.create(this.todoModel).subscribe(res => {
         console.warn(res);
-        this.lstTodoModel.push(res as TodoModel);
+        this.lstTodoModel.push(res);
         this.alertMsg = "Todos created successfully...!";
       })
     }
