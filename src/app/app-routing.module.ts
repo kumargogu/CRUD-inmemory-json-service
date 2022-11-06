@@ -8,6 +8,7 @@ import { PostdetailsComponent } from './fakeApi/postdetails/postdetails.componen
 import { PostsComponent } from './fakeApi/posts/posts.component';
 import { FormbuilderComponent } from './formbuilder/formbuilder.component';
 import { NotfoundComponent } from './notfound/notfound.component';
+import { OperatorsComponent } from './Operators-basics/operators/operators.component';
 import { ParentComponent } from './parent/parent.component';
 import { PhotodetailsComponent } from './photosapi/photodetails/photodetails.component';
 import { PhotosComponent } from './photosapi/photos/photos.component';
@@ -108,6 +109,10 @@ const routes: Routes = [
   {
      path:'child',
     component:ChildComponent
+  },
+  {
+    path: 'operators',
+    component:OperatorsComponent
   },
   {
     path: 'employee',

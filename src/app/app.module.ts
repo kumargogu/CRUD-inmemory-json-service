@@ -28,6 +28,7 @@ import { NotfoundComponent } from './notfound/notfound.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { UnauthorizedComponent } from './unauthorized/unauthorized.component';
 import { StudentfulldetailsComponent } from './student/studentfulldetails/studentfulldetails.component';
+import { OperatorsComponent } from './Operators-basics/operators/operators.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { StudentfulldetailsComponent } from './student/studentfulldetails/studen
     WelcomeComponent,
     UnauthorizedComponent,
     StudentfulldetailsComponent,
-    FilterdataPipe
+    FilterdataPipe,
+    OperatorsComponent
   ],
   imports: [
     BrowserModule,
