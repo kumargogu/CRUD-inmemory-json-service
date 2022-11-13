@@ -29,6 +29,8 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { UnauthorizedComponent } from './unauthorized/unauthorized.component';
 import { StudentfulldetailsComponent } from './student/studentfulldetails/studentfulldetails.component';
 import { OperatorsComponent } from './Operators-basics/operators/operators.component';
+import { LoginComponent } from './user-login/login/login.component';
+
 
 @NgModule({
   declarations: [
@@ -54,7 +56,8 @@ import { OperatorsComponent } from './Operators-basics/operators/operators.compo
     UnauthorizedComponent,
     StudentfulldetailsComponent,
     FilterdataPipe,
-    OperatorsComponent
+    OperatorsComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

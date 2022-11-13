@@ -1,0 +1,11 @@
+.card{
+
+    padding: 20px;
+    margin: auto;
+    width: 400px;
+    box-shadow: 2px 2px 8px black;
+    background-color:azure;
+}
+.form-group{
+    margin-top: 8px;
+}

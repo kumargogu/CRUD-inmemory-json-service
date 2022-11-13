@@ -44,17 +44,19 @@
             <a class="nav-link" routerLinkActive="active" routerLink="faculty">Faculty</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLinkActive="active" routerLink="operators">Operators</a>
+           <a class="nav-link" routerLinkActive="active" routerLink="operators">Operators</a>
+           </li>
+          <li class="nav-item">
+              <a class="nav-link" routerLinkActive="active" routerLink="ngswitchcase">ngswitchcase</a>
           </li>
-        
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Menu</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Link</a></li>
-              <li><a class="dropdown-item" href="#">Another link</a></li>
-              <li><a class="dropdown-item" href="#">A third link</a></li>
-            </ul>
+          
+          <li class="nav-item" *ngIf="!isVerified">
+            <a class="nav-link"routerLinkActive="active" routerLink="login">Login</a>
           </li>
+          <li class="nav-item">
+            <button class="btn btn-primary"routerLinkActive="active" (click)="logout()">LogOut</button>
+          </li>
+         
         </ul>
       </div>
     </div>

@@ -6,7 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./welcome.component.css']
 })
 export class WelcomeComponent implements OnInit {
-  logoUrl:string="./assets/rubylogo.png"
+  logoUrl: string = "./assets/rubylogo.png"
+  userName: string = localStorage.getItem('currentUser');
+ 
   constructor() { }
 
   ngOnInit(): void {

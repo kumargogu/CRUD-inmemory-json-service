@@ -20,6 +20,9 @@ import { TableComponent } from './tabledynamic/table/table.component';
 import { TodedetailComponent } from './todoApi/todedetail/todedetail.component';
 import { TodoComponent } from './todoApi/todo/todo.component';
 import { UnauthorizedComponent } from './unauthorized/unauthorized.component';
+import { AdminAuthGuard } from './user-login/adminauthguard.service';
+import { AuthGuard } from './user-login/authguard.service';
+import { LoginComponent } from './user-login/login/login.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 
 const routes: Routes = [
@@ -37,6 +40,7 @@ const routes: Routes = [
   }, I CAN USE CHILD ROUTE below*/
   {
     path: 'student',
+    canActivate:[AuthGuard],
     children: [
       {
         path: '',
@@ -72,6 +76,7 @@ const routes: Routes = [
   },
   {
     path: 'users',
+    canActivate:[AuthGuard,AdminAuthGuard],
     component:UsersComponent
   },
   {
@@ -115,7 +120,12 @@ const routes: Routes = [
     component:OperatorsComponent
   },
   {
+    path: 'login',
+    component:LoginComponent
+  },
+  {
     path: 'employee',
+    canActivate:[AuthGuard,AdminAuthGuard],
     loadChildren:()=>EmployeeModule
   },
   //////////////  ng g m faculty --route faculty --module app.module.ts
@@ -127,6 +137,10 @@ const routes: Routes = [
   {
     path: 'unauthorized',
     component:UnauthorizedComponent
+  },
+  {
+    path: 'ngswitchcase',
+    loadChildren: () => import('./ngswitchcase/ngswitchcase.module').then(m => m.NgswitchcaseModule)
   },
   {
     path: '**',

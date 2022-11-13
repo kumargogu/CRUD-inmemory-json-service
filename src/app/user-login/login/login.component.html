@@ -1,0 +1,22 @@
+<div class="card">
+    <h4 align="center">Log In</h4>
+    <form  (ngSubmit)="login()" [formGroup]="loginForm">
+    <div class="form-group">
+        <label for="txtUsername">User name</label>
+        <input type="email" [(ngModel)]="authModel.userName" id="txtUsername" formControlName="userName" name="txtUsername" class="form-control">
+        <div class="alert alert-danger" *ngIf="userName.touched && userName.invalid">
+             *User Name Mandatory
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="txtPassword">Password</label>
+        <input type="password" [(ngModel)]="authModel.password" id="txtPassword" formControlName="password" name="txtPassword" class="form-control">
+        <div class="alert alert-danger" *ngIf="password.touched && password.invalid">
+            *Password is Mandatory
+        </div>
+    </div>
+    <div class="form-group">
+    <button class="btn btn-primary" [style.backgroundColor]="isActive?'red':'pink'">Login</button>
+    </div>
+</form>
+</div>

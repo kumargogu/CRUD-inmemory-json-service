@@ -1,0 +1,29 @@
+ul{
+    
+    list-style: none;
+}
+ul li{
+    float: left;
+    margin-left: 20px;
+    background-color: bisque;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 6px black;
+  
+
+}
+
+.box{
+    height: 200px;
+    width: 100%;
+    background-color: antiquewhite;
+}
+h1{
+    text-align: center;
+    color: red;
+    
+}
+.active{
+    background-color: green;
+    color: white;
+}
